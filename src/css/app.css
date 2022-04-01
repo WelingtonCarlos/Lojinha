@@ -545,6 +545,7 @@ ul.devided > li:last-child {
 }
 
 .product-card-price .curr-price {
+  display: inline-block;
   margin-left: 5px;
   font-size: 20px;
   font-weight: 600;
@@ -563,6 +564,11 @@ ul.devided > li:last-child {
   visibility: hidden;
   transform: translateY(20px);
   transition: all 0.3s ease-in-out;
+}
+
+.product-btn > button > i {
+  width: 20px;
+  height: 20px;
 }
 
 .product-card:hover .product-btn {
@@ -812,8 +818,152 @@ footer ul li {
   border: 2px solid var(--black);
 }
 
+.product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img > img {
+  max-width: 70%;
+}
+
+.product-img-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img-item {
+  width: 90px;
+  cursor: pointer;
+  margin: 0 10px;
+  border: 1px solid var(--third-bg-color);
+}
+
+.product-img-item:hover {
+  background-color: var(--second-bg-color);
+}
+
+.product-row {
+  padding: 45px 0;
+}
+
+.product-info > * ~ * {
+  margin-top: 25px;
+}
+
+.product-info-detail-title {
+  font-weight: 600;
+  color: gray;
+}
+
+.product-description {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.product-info-price {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--red);
+}
+
+.product-quantity-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.product-quantity {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.product-quantity-btn {
+  height: 30px;
+  width: 30px;
+  background-color: gray;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.product-quantity-btn i {
+  font-size: 20px;
+  color: var(--main-bg-color);
+}
+
+.box-header {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.product-detail-description {
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.product-detail-description-content {
+  text-align: justify;
+  line-height: 26px;
+  font-size: 16px;
+  height: 600px;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.product-detail-description-content.active {
+  height: max-content;
+}
+
+.btn-view-description {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-rate {
+  margin-bottom: 40px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.user-avt {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-name {
+  margin-left: 20px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.user-rate-content {
+  line-height: 25px;
+}
+
 /* responsive */
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1024px) {
   .mobile-menu {
     display: flex;
   }
@@ -886,7 +1036,7 @@ footer ul li {
   }
 
   .mega-content {
-    position: relative;
+    position: absolute;
     opacity: 1;
     visibility: visible;
     box-shadow: unset;
@@ -902,10 +1052,6 @@ footer ul li {
 
   .mega-content ul > li > a {
     padding: 5px 0;
-  }
-
-  .mega-content .img-row {
-    display: none;
   }
 
   .hero {
@@ -929,7 +1075,7 @@ footer ul li {
   }
 
   .slide > .img > img {
-    width: 300px;
+    max-width: 300px;
   }
 
   .info-content p {
@@ -941,13 +1087,13 @@ footer ul li {
   }
 
   .slide-next,
-  .slider:hover .slider-next {
+  .slider:hover .slide-next {
     right: 40%;
   }
 
   .slide-prev,
-  .slider:hover .slider-prev {
-    right: 40%;
+  .slider:hover .slide-prev {
+    left: 40%;
   }
 
   .slide-next,
@@ -977,7 +1123,9 @@ footer ul li {
   .blog-info {
     width: 100%;
   }
+}
 
+@media screen and (max-width: 1023px) {
   .filter-toggle-box {
     display: block;
   }
@@ -1003,7 +1151,7 @@ footer ul li {
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .hero {
     height: calc(
       70vh -
@@ -1026,5 +1174,8 @@ footer ul li {
 
   .promotion-box {
     height: unset;
+  }
+  .mega-content .img-row {
+    display: none;
   }
 }

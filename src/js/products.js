@@ -88,9 +88,11 @@ renderProducts = (products) => {
                 <button class="btn-flat btn-hover btn-cart-add">
                   <i class="bx bxs-cart-add"></i>
                 </button>
-                <button class="btn-flat btn-hover btn-cart-add">
-                  <i class="bx bxs-heart"></i>
-                </button>
+                <a href="./product-detail.html">
+                  <button class="btn-flat btn-hover btn-cart-add">
+                    <i class='bx bxs-info-square'></i>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
